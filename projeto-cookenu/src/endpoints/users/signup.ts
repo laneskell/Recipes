@@ -33,7 +33,7 @@ export default async function signup(
 
         const cypherPassword: string = generateHash(password)
 
-        const token: string = generateToken({id})
+        const token: string = generateToken({id })
         
         await connection(userTableName)
             .insert({id, name, email, password: cypherPassword})

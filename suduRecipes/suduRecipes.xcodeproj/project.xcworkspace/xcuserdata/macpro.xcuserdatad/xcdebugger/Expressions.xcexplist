@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "RecipesListViewController.tableView(_:numberOfRowsInSection:):RecipesListViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ViewController.createUsers():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+            <PersistentString
+               value = "jsonObject[&quot;token&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RecipesListViewController.getRecipeList():RecipesListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.arrayRecipes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RecipesListViewController.getRecipeList():RecipesListViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "RecipesListViewController.tableView(_:cellForRowAt:):RecipesListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "arrayRecipes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

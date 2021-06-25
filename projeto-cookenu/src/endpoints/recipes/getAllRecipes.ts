@@ -9,14 +9,14 @@ export default async function getAllRecipes(
     res: Response
     ): Promise<void> {
     try{
-        const token = req.headers.authorization
+        // const token = req.headers.authorization
 
-        const tokenData = getTokenData(token!)
+        // const tokenData = getTokenData(token!)
 
-        if(!tokenData){
-            res.statusCode = 401
-            throw new Error("Unauthorized, token invalid")
-        }
+        // if(!tokenData){
+        //     res.statusCode = 401
+        //     throw new Error("Unauthorized, token invalid")
+        // }
 
 
         const recipe = await connection(recipesTableName)
