@@ -15,6 +15,12 @@
 		8EC4D1542684D8F300D92233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC4D1522684D8F300D92233 /* LaunchScreen.storyboard */; };
 		8EC4D15F2684D8F300D92233 /* suduRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D15E2684D8F300D92233 /* suduRecipesTests.swift */; };
 		8EC4D16A2684D8F300D92233 /* suduRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D1692684D8F300D92233 /* suduRecipesUITests.swift */; };
+		8EC4D1782684EF8D00D92233 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D1772684EF8D00D92233 /* LoginViewController.swift */; };
+		8EC4D17A2684EFB600D92233 /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D1792684EFB600D92233 /* signupViewController.swift */; };
+		8EC4D18226861A0C00D92233 /* RecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D18126861A0C00D92233 /* RecipesListViewController.swift */; };
+		8EC4D18426861B5E00D92233 /* recipeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D18326861B5E00D92233 /* recipeType.swift */; };
+		8EC4D18D26865DDB00D92233 /* CellRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D18B26865DDB00D92233 /* CellRecipe.swift */; };
+		8EC4D18E26865DDB00D92233 /* CellRecipe.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC4D18C26865DDB00D92233 /* CellRecipe.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		8EC4D1652684D8F300D92233 /* suduRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = suduRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC4D1692684D8F300D92233 /* suduRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = suduRecipesUITests.swift; sourceTree = "<group>"; };
 		8EC4D16B2684D8F300D92233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EC4D1772684EF8D00D92233 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8EC4D1792684EFB600D92233 /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
+		8EC4D18126861A0C00D92233 /* RecipesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListViewController.swift; sourceTree = "<group>"; };
+		8EC4D18326861B5E00D92233 /* recipeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeType.swift; sourceTree = "<group>"; };
+		8EC4D18B26865DDB00D92233 /* CellRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellRecipe.swift; sourceTree = "<group>"; };
+		8EC4D18C26865DDB00D92233 /* CellRecipe.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellRecipe.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +112,18 @@
 			isa = PBXGroup;
 			children = (
 				8EC4D1472684D8EF00D92233 /* AppDelegate.swift */,
-				8EC4D1492684D8EF00D92233 /* SceneDelegate.swift */,
 				8EC4D14B2684D8EF00D92233 /* ViewController.swift */,
+				8EC4D1772684EF8D00D92233 /* LoginViewController.swift */,
+				8EC4D1792684EFB600D92233 /* signupViewController.swift */,
+				8EC4D18126861A0C00D92233 /* RecipesListViewController.swift */,
+				8EC4D1492684D8EF00D92233 /* SceneDelegate.swift */,
 				8EC4D14D2684D8EF00D92233 /* Main.storyboard */,
 				8EC4D1502684D8F300D92233 /* Assets.xcassets */,
-				8EC4D1522684D8F300D92233 /* LaunchScreen.storyboard */,
 				8EC4D1552684D8F300D92233 /* Info.plist */,
+				8EC4D1522684D8F300D92233 /* LaunchScreen.storyboard */,
+				8EC4D18326861B5E00D92233 /* recipeType.swift */,
+				8EC4D18B26865DDB00D92233 /* CellRecipe.swift */,
+				8EC4D18C26865DDB00D92233 /* CellRecipe.xib */,
 			);
 			path = suduRecipes;
 			sourceTree = "<group>";
@@ -234,6 +252,7 @@
 				8EC4D1542684D8F300D92233 /* LaunchScreen.storyboard in Resources */,
 				8EC4D1512684D8F300D92233 /* Assets.xcassets in Resources */,
 				8EC4D14F2684D8EF00D92233 /* Main.storyboard in Resources */,
+				8EC4D18E26865DDB00D92233 /* CellRecipe.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC4D1782684EF8D00D92233 /* LoginViewController.swift in Sources */,
 				8EC4D14C2684D8EF00D92233 /* ViewController.swift in Sources */,
+				8EC4D18426861B5E00D92233 /* recipeType.swift in Sources */,
+				8EC4D18D26865DDB00D92233 /* CellRecipe.swift in Sources */,
+				8EC4D18226861A0C00D92233 /* RecipesListViewController.swift in Sources */,
+				8EC4D17A2684EFB600D92233 /* signupViewController.swift in Sources */,
 				8EC4D1482684D8EF00D92233 /* AppDelegate.swift in Sources */,
 				8EC4D14A2684D8EF00D92233 /* SceneDelegate.swift in Sources */,
 			);
