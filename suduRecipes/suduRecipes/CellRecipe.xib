@@ -9,30 +9,57 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCellRecipe" rowHeight="115" id="KGk-i7-Jjw" customClass="CellRecipe" customModule="suduRecipes" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCellRecipe" rowHeight="242" id="KGk-i7-Jjw" customClass="CellRecipe" customModule="suduRecipes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="242"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="242"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmt-hG-Y3p">
-                        <rect key="frame" x="139" y="47.5" width="42" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5M1-MM-qNM">
+                        <rect key="frame" x="10" y="7" width="300" height="180"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="180" id="1FP-SR-AuS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKj-4D-oQO">
+                        <rect key="frame" x="26" y="214" width="268" height="14"/>
+                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                         <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmt-hG-Y3p">
+                        <rect key="frame" x="26" y="192" width="54.5" height="18"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <font key="NSFont" size="18" name="Courier-Bold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Dmt-hG-Y3p" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="gkR-sB-W7t"/>
-                    <constraint firstItem="Dmt-hG-Y3p" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ral-ct-pem"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="yKj-4D-oQO" secondAttribute="bottom" constant="1" id="7ny-0g-n7n"/>
+                    <constraint firstItem="yKj-4D-oQO" firstAttribute="top" secondItem="Dmt-hG-Y3p" secondAttribute="bottom" constant="3" id="BI1-IJ-yIS"/>
+                    <constraint firstItem="yKj-4D-oQO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="VOz-92-m91"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yKj-4D-oQO" secondAttribute="trailing" constant="10" id="ZPV-XY-LVK"/>
+                    <constraint firstItem="Dmt-hG-Y3p" firstAttribute="top" secondItem="5M1-MM-qNM" secondAttribute="bottom" constant="5" id="aCm-aK-tej"/>
+                    <constraint firstItem="5M1-MM-qNM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="b3X-wW-Hij"/>
+                    <constraint firstItem="Dmt-hG-Y3p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="e4k-Lo-UyM"/>
+                    <constraint firstItem="5M1-MM-qNM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="jLk-U0-joL"/>
+                    <constraint firstAttribute="trailing" secondItem="5M1-MM-qNM" secondAttribute="trailing" constant="10" id="yBq-hP-GdW"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imageViewRecipe" destination="5M1-MM-qNM" id="DUx-xR-JS5"/>
+                <outlet property="labelTextDescription" destination="yKj-4D-oQO" id="UdL-J2-WtJ"/>
                 <outlet property="labelTitle" destination="Dmt-hG-Y3p" id="MIx-E4-ddu"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="70.647321428571431"/>
+            <point key="canvasLocation" x="137.68115942028987" y="36.160714285714285"/>
         </tableViewCell>
     </objects>
 </document>

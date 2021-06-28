@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LM3-ww-M8c">
+            <objects>
+                <navigationController id="emv-vw-3Wj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uk4-Zj-iIY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="niL-NM-6aB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1309" y="24"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7AU-7D-W9R">
+            <objects>
+                <navigationController id="fzp-RA-n6k" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GOR-Sy-goP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLz-lV-hB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1260" y="43"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lY7-Ty-6Jy">
+                                <rect key="frame" x="20" y="54" width="374" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="WHG-so-Iqb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWo-i7-BNI">
+                                <rect key="frame" x="20" y="412" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQL-Lh-I1I">
+                                <rect key="frame" x="0.0" y="753" width="414" height="60"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.1529411765" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6Ha-14-Ckf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="CRIAR UMA RECEITA">
+                                    <color key="titleColor" red="0.94444602727890015" green="0.97328346967697144" blue="0.91042345762252808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="1Cn-vG-4yh">
+                                <rect key="frame" x="20" y="448" width="374" height="297"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WWo-i7-BNI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Ei5-fy-QrE"/>
+                            <constraint firstItem="lY7-Ty-6Jy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="J3R-61-G2S"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WWo-i7-BNI" secondAttribute="trailing" constant="20" id="Qvm-F1-uC3"/>
+                            <constraint firstItem="OQL-Lh-I1I" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Wmx-SZ-Dvi"/>
+                            <constraint firstItem="1Cn-vG-4yh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Z66-4y-ep2"/>
+                            <constraint firstItem="lY7-Ty-6Jy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="b0s-wM-wzJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1Cn-vG-4yh" secondAttribute="trailing" constant="20" id="dWH-sT-KEw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lY7-Ty-6Jy" secondAttribute="trailing" constant="20" id="gOc-YA-j9e"/>
+                            <constraint firstItem="WWo-i7-BNI" firstAttribute="top" secondItem="lY7-Ty-6Jy" secondAttribute="bottom" constant="8" id="q3U-RE-WLJ"/>
+                            <constraint firstItem="OQL-Lh-I1I" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="w8D-OR-mKT"/>
+                            <constraint firstItem="OQL-Lh-I1I" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wgC-S7-HYp"/>
+                        </constraints>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="32.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

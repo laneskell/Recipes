@@ -131,21 +131,6 @@
                                     <segue destination="v0Y-3O-xI3" kind="show" id="XPb-dL-ASl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLX-nz-LwA">
-                                <rect key="frame" x="100" y="264" width="120" height="40"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.1529411765" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="LEi-z7-1I6"/>
-                                    <constraint firstAttribute="height" constant="40" id="u3b-BL-HpC"/>
-                                </constraints>
-                                <state key="normal" title="TESTE DE TELA">
-                                    <color key="titleColor" red="0.94444602730000005" green="0.97328346970000001" blue="0.91042345759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnLogin:" destination="96c-kx-HUd" eventType="touchUpInside" id="aoL-6g-LKG"/>
-                                    <segue destination="fYt-1Z-xxS" kind="show" id="prB-ng-ZKg"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QAK-rw-Hk2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -158,12 +143,10 @@
                             <constraint firstItem="igY-gJ-TJo" firstAttribute="leading" secondItem="QAK-rw-Hk2" secondAttribute="leading" constant="16" id="hE2-TP-Y1N"/>
                             <constraint firstItem="6Im-Uj-j8H" firstAttribute="leading" secondItem="QAK-rw-Hk2" secondAttribute="leading" constant="16" id="hgm-3H-gvQ"/>
                             <constraint firstItem="54T-SN-AVz" firstAttribute="top" secondItem="KMq-35-Y0s" secondAttribute="bottom" constant="25" id="hk6-VI-XWh"/>
-                            <constraint firstItem="CLX-nz-LwA" firstAttribute="centerX" secondItem="1EC-yp-dLl" secondAttribute="centerX" id="iVv-Fm-rPL"/>
                             <constraint firstItem="KMq-35-Y0s" firstAttribute="leading" secondItem="QAK-rw-Hk2" secondAttribute="leading" constant="16" id="t0A-qh-2vT"/>
                             <constraint firstItem="QAK-rw-Hk2" firstAttribute="trailing" secondItem="7jt-Th-iJL" secondAttribute="trailing" constant="16" id="u5e-kT-CqM"/>
                             <constraint firstItem="KMq-35-Y0s" firstAttribute="top" secondItem="6Im-Uj-j8H" secondAttribute="bottom" constant="8" id="u6F-ae-RUY"/>
                             <constraint firstItem="7jt-Th-iJL" firstAttribute="top" secondItem="igY-gJ-TJo" secondAttribute="bottom" constant="8" id="vge-gk-hYA"/>
-                            <constraint firstItem="CLX-nz-LwA" firstAttribute="centerY" secondItem="1EC-yp-dLl" secondAttribute="centerY" id="yav-Jk-Le1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Entrar" id="3QP-dP-ypO"/>
@@ -285,7 +268,7 @@
             </objects>
             <point key="canvasLocation" x="1890" y="509"/>
         </scene>
-        <!--Recipes List View Controller-->
+        <!--Receitas-->
         <scene sceneID="Bwx-sC-NO9">
             <objects>
                 <tableViewController id="v0Y-3O-xI3" customClass="RecipesListViewController" customModule="suduRecipes" customModuleProvider="target" sceneMemberID="viewController">
@@ -298,11 +281,82 @@
                             <outlet property="delegate" destination="v0Y-3O-xI3" id="Ra8-A6-dNz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="yUV-b5-4f1"/>
+                    <navigationItem key="navigationItem" title="Receitas" id="yUV-b5-4f1"/>
+                    <connections>
+                        <segue destination="TDK-fM-1xm" kind="show" identifier="detailRecipe" id="DXI-I9-JOR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6S-9o-KSq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2789" y="171"/>
+        </scene>
+        <!--Details Recipes View Controller-->
+        <scene sceneID="aw2-d3-niA">
+            <objects>
+                <viewController id="TDK-fM-1xm" customClass="DetailsRecipesViewController" customModule="suduRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8j5-Ab-MvN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXz-ts-jIu">
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.1529411765" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ZT8-gM-Q1j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="CRIAR UMA RECEITA">
+                                    <color key="titleColor" red="0.94444602727890015" green="0.97328346967697144" blue="0.91042345762252808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AlX-OH-FpX">
+                                <rect key="frame" x="20" y="47" width="280" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2LJ-Yn-ijt"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bIl-1f-66R">
+                                <rect key="frame" x="20" y="288" width="280" height="212"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIv-sn-vSM">
+                                <rect key="frame" x="20" y="250" width="280" height="28"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mjp-Gf-Ofa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hXz-ts-jIu" secondAttribute="trailing" id="107-CJ-Jri"/>
+                            <constraint firstItem="JIv-sn-vSM" firstAttribute="top" secondItem="AlX-OH-FpX" secondAttribute="bottom" constant="3" id="64U-Ac-3Tp"/>
+                            <constraint firstItem="Mjp-Gf-Ofa" firstAttribute="trailing" secondItem="AlX-OH-FpX" secondAttribute="trailing" constant="20" id="6mz-fa-BxY"/>
+                            <constraint firstItem="hXz-ts-jIu" firstAttribute="leading" secondItem="8j5-Ab-MvN" secondAttribute="leading" id="BHZ-p4-izL"/>
+                            <constraint firstItem="Mjp-Gf-Ofa" firstAttribute="bottom" secondItem="hXz-ts-jIu" secondAttribute="bottom" id="Hrz-HB-dXu"/>
+                            <constraint firstItem="Mjp-Gf-Ofa" firstAttribute="trailing" secondItem="bIl-1f-66R" secondAttribute="trailing" constant="20" id="NGs-i1-3Z2"/>
+                            <constraint firstItem="bIl-1f-66R" firstAttribute="top" secondItem="JIv-sn-vSM" secondAttribute="bottom" constant="10" id="b8H-Hb-0Sg"/>
+                            <constraint firstItem="JIv-sn-vSM" firstAttribute="leading" secondItem="Mjp-Gf-Ofa" secondAttribute="leading" constant="20" id="dgO-Qq-A90"/>
+                            <constraint firstItem="AlX-OH-FpX" firstAttribute="leading" secondItem="Mjp-Gf-Ofa" secondAttribute="leading" constant="20" id="hEl-MS-RcN"/>
+                            <constraint firstItem="bIl-1f-66R" firstAttribute="leading" secondItem="Mjp-Gf-Ofa" secondAttribute="leading" constant="20" id="kwc-ST-hBm"/>
+                            <constraint firstItem="AlX-OH-FpX" firstAttribute="top" secondItem="Mjp-Gf-Ofa" secondAttribute="top" constant="3" id="vGn-NH-rnO"/>
+                            <constraint firstAttribute="trailing" secondItem="JIv-sn-vSM" secondAttribute="trailing" constant="20" id="xDs-H6-lJR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qbT-7B-xDo"/>
+                    <connections>
+                        <outlet property="labelDescriptionRecipe" destination="bIl-1f-66R" id="1g0-7j-08r"/>
+                        <outlet property="labelTitleRecipe" destination="JIv-sn-vSM" id="gu3-gk-klt"/>
+                        <outlet property="recipeImageView" destination="AlX-OH-FpX" id="Yv3-fb-8A0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qro-Qf-u2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3588.75" y="178.52112676056339"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DVA-jR-xC5">
@@ -322,55 +376,15 @@
             </objects>
             <point key="canvasLocation" x="18.75" y="75"/>
         </scene>
-        <!--Entrar-->
-        <scene sceneID="HuA-h9-hUK">
-            <objects>
-                <viewController id="fYt-1Z-xxS" customClass="LoginViewController" customModule="suduRecipes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sen-dd-A70">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSOU DO LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96i-zz-X2R">
-                                <rect key="frame" x="16" y="64" width="150" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAD-qf-kjx">
-                                <rect key="frame" x="100" y="186" width="120" height="40"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.1529411765" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="idP-pY-L5n"/>
-                                    <constraint firstAttribute="width" constant="120" id="qaR-hJ-zY3"/>
-                                </constraints>
-                                <state key="normal" title="RECEITAS">
-                                    <color key="titleColor" red="0.94444602730000005" green="0.97328346970000001" blue="0.91042345759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnLogin:" destination="fYt-1Z-xxS" eventType="touchUpInside" id="0dv-B6-9sS"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="PKA-9S-VTE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="96i-zz-X2R" firstAttribute="leading" secondItem="PKA-9S-VTE" secondAttribute="leading" constant="16" id="6WZ-BD-ELY"/>
-                            <constraint firstItem="96i-zz-X2R" firstAttribute="top" secondItem="PKA-9S-VTE" secondAttribute="top" constant="20" id="AJo-PS-biY"/>
-                            <constraint firstItem="BAD-qf-kjx" firstAttribute="centerX" secondItem="sen-dd-A70" secondAttribute="centerX" id="W6F-JH-En5"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Entrar" id="sKh-Aq-fN8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eDa-Cd-OPf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2788" y="-530"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XPb-dL-ASl"/>
+        <segue reference="hAj-dP-b7s"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Captura de Tela 2021-06-24 às 12.21.02" width="878" height="414"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

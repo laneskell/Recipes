@@ -17,13 +17,6 @@ struct Recipe: Codable {
 
 }
 
-struct Post: Codable {
-    let userId: Int
-    let id: Int
-    let title: String
-    let body: String
-}
-
 
 class RecipesListViewController: UITableViewController {
 
@@ -34,7 +27,6 @@ class RecipesListViewController: UITableViewController {
         tableView.register(UINib(nibName: "CellRecipe", bundle: nil), forCellReuseIdentifier: "idCellRecipe")
         getRecipeList()
 
-        // Do any additional setup after loading the view.
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,32 +37,40 @@ class RecipesListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "idCellRecipe", for: indexPath) as? CellRecipe{
             let recipe = arrayRecipes[indexPath.row]
-            
-//            print(cell.btnTitle.titleLabel.text)
-            
             cell.labelTitle.text = recipe.title
+            cell.labelTextDescription.text = recipe.description
+            if let url = URL(string: recipe.image) {
+                let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                    guard let data = data, error == nil else { return }
+                    
+                    DispatchQueue.main.async {
+                        cell.imageViewRecipe.image = UIImage(data: data)
+                    }
+                }
+                
+                task.resume()
+            }
             
             return cell
         }
-       
         
         return UITableViewCell()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "detailRecipe"{
+            print("entrou prepare")
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let recipeSelected = self.arrayRecipes[indexPath.row]
+                let viewControllerDestiny = segue.destination as! DetailsRecipesViewController
+                viewControllerDestiny.recipe = recipeSelected
+                print("receita selecionada", recipeSelected)
+            }
+        }
+    }
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//       return 1
-//    }
-
-  
-//
     func getRecipeList() {
         let url = URL (string: "http://localhost:3003/recipe")!
-//        var request = URLRequest(url: url)
-//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//        let token:String = UserDefaults.standard.string(forKey: "token")!
-//        print(token)
-//        request.setValue(token, forHTTPHeaderField: "Authorization")
-
                 
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
@@ -99,6 +99,9 @@ class RecipesListViewController: UITableViewController {
         
         task.resume()
     }
+    
+    
+    
 
     /*
     // MARK: - Navigation
