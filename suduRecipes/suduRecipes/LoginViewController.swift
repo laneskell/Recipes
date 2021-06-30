@@ -22,14 +22,21 @@ class LoginViewController: UIViewController {
         let email = textFieldEmail.text ?? ""
         let password = textFieldPassword.text ?? ""
         
-        enterLogin(email: email, password: password)
+        //Troquei esse
+        //enterLogin(email: email, password: password)
         
-        
+        //Por esse
+        APIService.enterLogin(email: email, password: password, completion: { responseData, error in
+            if error == nil, let response = responseData {
+                print(response)
+            } else {
+                self.alertMessage(title: "Dados incorretos", message: "Digite novamente")
+            }
+        })
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()        
     }
     
     func enterLogin(email:String, password:String) {
@@ -49,37 +56,12 @@ class LoginViewController: UIViewController {
             print("response: \(String(describing: response))")
             print("error: \(String(describing: error))")
 
-            guard let responseData = data else {return}
-        
-            if error == nil{
-                print(responseData)
-
-            }else{
-                self.alertMessage(title: "Dados incorretos", message: "Digite novamente")
-            }
-            
+            guard let _ = data else {return}
         }
-
-        
         task.resume()
     }
-    
-    
-  
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
