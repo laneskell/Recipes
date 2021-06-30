@@ -13,6 +13,7 @@ struct Recipe: Codable {
     let title: String
     let description: String
     let created_at: String
+    let category: String
     let author_id: String
 
 }
@@ -39,8 +40,22 @@ class RecipesListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "idCellRecipe", for: indexPath) as? CellRecipe{
             let recipe = arrayRecipes[indexPath.row]
+            
+            
+            if recipe.category == "salgado"{
+                let bgColorView = UIView()
+                bgColorView.backgroundColor = UIColor.purple
+                cell.backgroundView = bgColorView
+            }else if recipe.category == "doce"{
+                let bgColorView = UIView()
+                bgColorView.backgroundColor = UIColor.gray
+                cell.backgroundView = bgColorView
+            }
+        
+            
             cell.labelTitle.text = recipe.title
             cell.labelTextDescription.text = recipe.description
+            cell.labelCategory.text = recipe.category
             if let url = URL(string: recipe.image) {
                 let task = URLSession.shared.dataTask(with: url) { data, response, error in
                     guard let data = data, error == nil else { return }
@@ -80,10 +95,12 @@ class RecipesListViewController: UITableViewController {
             
         
         
-        let recipeVc = UIViewController()
+        let recipeVc = DetailsRecipesViewController()
     recipeVc.title =  recipeSelected.title
     
-        self.present(UINavigationController(rootViewController: recipeVc), animated: true, completion: nil)
+        
+        
+        self.present(UINavigationController(rootViewController: recipeVc), animated: true)
         
         
        

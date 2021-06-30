@@ -40,10 +40,18 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p12-1A-Vyy">
+                        <rect key="frame" x="262" y="166" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="p12-1A-Vyy" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="5td-b2-Ebd"/>
                     <constraint firstAttribute="bottomMargin" secondItem="yKj-4D-oQO" secondAttribute="bottom" constant="1" id="7ny-0g-n7n"/>
                     <constraint firstItem="yKj-4D-oQO" firstAttribute="top" secondItem="Dmt-hG-Y3p" secondAttribute="bottom" constant="3" id="BI1-IJ-yIS"/>
+                    <constraint firstItem="yKj-4D-oQO" firstAttribute="top" secondItem="p12-1A-Vyy" secondAttribute="bottom" id="SsE-A5-50z"/>
                     <constraint firstItem="yKj-4D-oQO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="VOz-92-m91"/>
                     <constraint firstAttribute="trailingMargin" secondItem="yKj-4D-oQO" secondAttribute="trailing" constant="10" id="ZPV-XY-LVK"/>
                     <constraint firstItem="Dmt-hG-Y3p" firstAttribute="top" secondItem="5M1-MM-qNM" secondAttribute="bottom" constant="5" id="aCm-aK-tej"/>
@@ -56,6 +64,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imageViewRecipe" destination="5M1-MM-qNM" id="DUx-xR-JS5"/>
+                <outlet property="labelCategory" destination="p12-1A-Vyy" id="wmO-xd-vPV"/>
                 <outlet property="labelTextDescription" destination="yKj-4D-oQO" id="UdL-J2-WtJ"/>
                 <outlet property="labelTitle" destination="Dmt-hG-Y3p" id="MIx-E4-ddu"/>
             </connections>

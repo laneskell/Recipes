@@ -16,4 +16,5 @@ class CellRecipe: UITableViewCell {
     
     @IBOutlet weak var imageViewRecipe: UIImageView!
     
+    @IBOutlet weak var labelCategory: UILabel!
 }
