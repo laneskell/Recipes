@@ -48,7 +48,6 @@ class signupViewController: UIViewController {
                                 self.alertMessage(title: "Dados incorretos", message: "Não pode deixar vazio, preencha todos os campos!")
                             }
                             
-                        
                         }else {
                             self.alertMessage(title: "Dados incorretos", message: "As senhas precisam ser iguais")
                 } /*fim valid senha*/

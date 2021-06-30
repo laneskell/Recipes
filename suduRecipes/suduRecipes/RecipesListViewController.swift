@@ -20,6 +20,8 @@ struct Recipe: Codable {
 
 class RecipesListViewController: UITableViewController {
 
+
+    
     var arrayRecipes:[Recipe] = []
     
     override func viewDidLoad() {
@@ -57,18 +59,38 @@ class RecipesListViewController: UITableViewController {
         return UITableViewCell()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == "detailRecipe"{
-            print("entrou prepare")
-            if let indexPath = tableView.indexPathForSelectedRow{
-                let recipeSelected = self.arrayRecipes[indexPath.row]
-                let viewControllerDestiny = segue.destination as! DetailsRecipesViewController
-                viewControllerDestiny.recipe = recipeSelected
-                print("receita selecionada", recipeSelected)
-            }
-        }
+   
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let recipeSelected = self.arrayRecipes[indexPath.row]
+        
+//        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            if segue.identifier == "recipeDetailSegue" {
+//
+//         self.performSegue(withIdentifier: "recipeDetailSegue", sender: self)
+//                if let destination = segue.destination as? DetailsRecipesViewController {
+//
+//                    destination.title = recipeSelected.title
+//
+//                    destination.labelTitleRecipe.text = recipeSelected.title
+//                }
+//            }
+            
+        
+        
+        let recipeVc = UIViewController()
+    recipeVc.title =  recipeSelected.title
+    
+        self.present(UINavigationController(rootViewController: recipeVc), animated: true, completion: nil)
+        
+        
+       
     }
 
+    
+    
     func getRecipeList() {
         let url = URL (string: "http://localhost:3003/recipe")!
                 

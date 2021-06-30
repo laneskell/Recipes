@@ -22,6 +22,7 @@
 		8EC4D18D26865DDB00D92233 /* CellRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D18B26865DDB00D92233 /* CellRecipe.swift */; };
 		8EC4D18E26865DDB00D92233 /* CellRecipe.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC4D18C26865DDB00D92233 /* CellRecipe.xib */; };
 		8EC4D192268A33B100D92233 /* DetailsRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D191268A33B100D92233 /* DetailsRecipesViewController.swift */; };
+		8EC4D194268B794E00D92233 /* createRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D193268B794E00D92233 /* createRecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		8EC4D18B26865DDB00D92233 /* CellRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellRecipe.swift; sourceTree = "<group>"; };
 		8EC4D18C26865DDB00D92233 /* CellRecipe.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellRecipe.xib; sourceTree = "<group>"; };
 		8EC4D191268A33B100D92233 /* DetailsRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRecipesViewController.swift; sourceTree = "<group>"; };
+		8EC4D193268B794E00D92233 /* createRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createRecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				8EC4D14B2684D8EF00D92233 /* ViewController.swift */,
 				8EC4D1772684EF8D00D92233 /* LoginViewController.swift */,
 				8EC4D1792684EFB600D92233 /* signupViewController.swift */,
+				8EC4D193268B794E00D92233 /* createRecipeView.swift */,
 				8EC4D18126861A0C00D92233 /* RecipesListViewController.swift */,
 				8EC4D191268A33B100D92233 /* DetailsRecipesViewController.swift */,
 				8EC4D1492684D8EF00D92233 /* SceneDelegate.swift */,
@@ -284,6 +287,7 @@
 				8EC4D14C2684D8EF00D92233 /* ViewController.swift in Sources */,
 				8EC4D18426861B5E00D92233 /* recipeType.swift in Sources */,
 				8EC4D18D26865DDB00D92233 /* CellRecipe.swift in Sources */,
+				8EC4D194268B794E00D92233 /* createRecipeView.swift in Sources */,
 				8EC4D18226861A0C00D92233 /* RecipesListViewController.swift in Sources */,
 				8EC4D192268A33B100D92233 /* DetailsRecipesViewController.swift in Sources */,
 				8EC4D17A2684EFB600D92233 /* signupViewController.swift in Sources */,
