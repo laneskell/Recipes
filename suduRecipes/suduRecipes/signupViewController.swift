@@ -22,6 +22,13 @@ class signupViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func alertConfirm(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func buttonCreateUser(_ sender: Any) {
     
         let name = textFieldName.text ?? ""
@@ -41,7 +48,6 @@ class signupViewController: UIViewController {
                                 self.alertMessage(title: "Dados incorretos", message: "Não pode deixar vazio, preencha todos os campos!")
                             }
                             
-                        
                         }else {
                             self.alertMessage(title: "Dados incorretos", message: "As senhas precisam ser iguais")
                 } /*fim valid senha*/
@@ -73,7 +79,7 @@ class signupViewController: UIViewController {
                 if let dicionario = jsonObject {
                     if let token = dicionario["token"] as? String{
                         UserDefaults.standard.set(token, forKey: "token")
-                        self.alertMessage(title: "Sucesso!", message: "Usuário cadastrado, Bem vind@!")
+                        self.alertConfirm(title: "Sucesso!", message: "Usuário cadastrado, Bem vind@!")
                     }
                   
                 }
