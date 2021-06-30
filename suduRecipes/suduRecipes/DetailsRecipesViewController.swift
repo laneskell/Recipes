@@ -21,17 +21,20 @@ class DetailsRecipesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        labelTitleRecipe.text = recipe.title
-        labelDescriptionRecipe.text = recipe.description
-        if let url = URL(string: recipe.image) {
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data = data, error == nil else { return }
-                DispatchQueue.main.async {
-                    self.recipeImageView.image = UIImage(data: data)
-                }
-            }
-
-            task.resume()
-        }
+        
+        
+        
+//        labelTitleRecipe.text = recipe.title
+//        labelDescriptionRecipe.text = recipe.description
+//        if let url = URL(string: recipe.image) {
+//            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+//                guard let data = data, error == nil else { return }
+//                DispatchQueue.main.async {
+//                    self.recipeImageView.image = UIImage(data: data)
+//                }
+//            }
+//
+//            task.resume()
+//        }
     }
 }
