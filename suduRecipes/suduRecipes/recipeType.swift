@@ -3,11 +3,10 @@
 //  suduRecipes
 //
 //  Created by Kell Lanes on 25/06/21.
-//
 
 import UIKit
 
-class recipe{
+class recipe {
     var id: String!
     var title: String!
     var image: String!
@@ -23,6 +22,4 @@ class recipe{
         self.created_at = created_at
         self.author_id = author_id
     }
- 
-      
 }

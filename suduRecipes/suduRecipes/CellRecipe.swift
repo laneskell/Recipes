@@ -9,12 +9,8 @@ import UIKit
 
 class CellRecipe: UITableViewCell {
 
-
     @IBOutlet weak var labelTitle: UILabel!
-    
     @IBOutlet weak var labelTextDescription: UILabel!
-    
     @IBOutlet weak var imageViewRecipe: UIImageView!
-    
     @IBOutlet weak var labelCategory: UILabel!
 }

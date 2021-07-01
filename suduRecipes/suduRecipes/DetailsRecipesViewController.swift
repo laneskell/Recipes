@@ -9,21 +9,16 @@ import Foundation
 import UIKit
 
 class DetailsRecipesViewController: UIViewController {
-    
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var labelTitleRecipe: UILabel!
     @IBOutlet weak var labelDescriptionRecipe: UITextView!
 
     var recipe: Recipe!
 
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        
+//        STORY BOARD TELA DETALHES - AJUSTAR
 //        labelTitleRecipe.text = recipe.title
 //        labelDescriptionRecipe.text = recipe.description
 //        if let url = URL(string: recipe.image) {
@@ -33,8 +28,8 @@ class DetailsRecipesViewController: UIViewController {
 //                    self.recipeImageView.image = UIImage(data: data)
 //                }
 //            }
-//
 //            task.resume()
 //        }
+        
     }
 }
