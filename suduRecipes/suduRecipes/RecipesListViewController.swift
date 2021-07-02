@@ -7,28 +7,28 @@
 
 import UIKit
 
-struct Recipe: Codable {
-    let id: String
-    let image: String
-    let title: String
-    let description: String
-    let created_at: String
-    let category: String
-    let author_id: String
-
-}
-
-
 class RecipesListViewController: UITableViewController {
 
-
+    var arrayRecipes: [Recipe] = []
     
-    var arrayRecipes:[Recipe] = []
-    
+    @objc func refresh(sender:AnyObject)
+    {
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        self.refreshControl?.endRefreshing()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "CellRecipe", bundle: nil), forCellReuseIdentifier: "idCellRecipe")
-        getRecipeList()
+        APIService.getRecipeList(completion: {data,error,array in
+            self.arrayRecipes = array
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        })
+        self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
 
     }
     
@@ -36,23 +36,23 @@ class RecipesListViewController: UITableViewController {
         return arrayRecipes.count
     }
     
-        
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "idCellRecipe", for: indexPath) as? CellRecipe{
             let recipe = arrayRecipes[indexPath.row]
             
-            
-            if recipe.category == "salgado"{
+            if recipe.category == "salgado" {
                 let bgColorView = UIView()
-                bgColorView.backgroundColor = UIColor.purple
+                bgColorView.backgroundColor = UIColor(red:  217/255.0, green: 241/255.0, blue: 255/255.0, alpha: 70.0/100.0)
                 cell.backgroundView = bgColorView
-            }else if recipe.category == "doce"{
+            } else if recipe.category == "doce" {
+                let bgColorView = UIView()
+                bgColorView.backgroundColor = UIColor(red:  255/255.0, green: 186/255.0, blue: 216/255.0, alpha: 60.0/100.0)
+                cell.backgroundView = bgColorView
+            } else{
                 let bgColorView = UIView()
                 bgColorView.backgroundColor = UIColor.gray
                 cell.backgroundView = bgColorView
             }
-        
-            
             cell.labelTitle.text = recipe.title
             cell.labelTextDescription.text = recipe.description
             cell.labelCategory.text = recipe.category
@@ -81,6 +81,8 @@ class RecipesListViewController: UITableViewController {
         
         let recipeSelected = self.arrayRecipes[indexPath.row]
         
+        
+//COD PARA EXIBIR A TELA DE DETALHES - AJUSTAR
 //        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //            if segue.identifier == "recipeDetailSegue" {
 //
@@ -93,63 +95,17 @@ class RecipesListViewController: UITableViewController {
 //                }
 //            }
             
-        
+//        let mainStoryboard = UIStoryboard.init(name: "Custom", bundle: Bundle.main)
+//        if let customViewController = mainStoryboard.instantiateViewController(identifier: "CustomViewControllerID") as? CustomViewController {
+//        }
         
         let recipeVc = DetailsRecipesViewController()
-    recipeVc.title =  recipeSelected.title
-    
+        recipeVc.title =  recipeSelected.title
         
-        
-        self.present(UINavigationController(rootViewController: recipeVc), animated: true)
-        
-        
-       
-    }
-
-    
-    
-    func getRecipeList() {
-        let url = URL (string: "http://localhost:3003/recipe")!
-                
-        let task = URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
-
-            print("response: \(String(describing: response))")
-            print("error de req: \(String(describing: error))")
-
-            if let data = data{
-                do {
-                    self.arrayRecipes =  try JSONDecoder().decode([Recipe].self, from: data)
-                    print("receitas:", self.arrayRecipes)
-                    
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
-                  
-                    
-                }catch let error {
-                    print("deu errado:",error)
-                }
-                
-            }
-        
-        }
-
-        
-        task.resume()
+        self.navigationController?.pushViewController(recipeVc, animated: true)
+            
+//        self.present(UINavigationController(rootViewController: recipeVc), animated: true)
     }
     
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

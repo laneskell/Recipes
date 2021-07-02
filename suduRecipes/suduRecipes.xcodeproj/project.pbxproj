@@ -16,13 +16,13 @@
 		8EC4D15F2684D8F300D92233 /* suduRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D15E2684D8F300D92233 /* suduRecipesTests.swift */; };
 		8EC4D16A2684D8F300D92233 /* suduRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D1692684D8F300D92233 /* suduRecipesUITests.swift */; };
 		8EC4D1782684EF8D00D92233 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D1772684EF8D00D92233 /* LoginViewController.swift */; };
-		8EC4D17A2684EFB600D92233 /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D1792684EFB600D92233 /* signupViewController.swift */; };
+		8EC4D17A2684EFB600D92233 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D1792684EFB600D92233 /* SignupViewController.swift */; };
 		8EC4D18226861A0C00D92233 /* RecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D18126861A0C00D92233 /* RecipesListViewController.swift */; };
 		8EC4D18426861B5E00D92233 /* recipeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D18326861B5E00D92233 /* recipeType.swift */; };
 		8EC4D18D26865DDB00D92233 /* CellRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D18B26865DDB00D92233 /* CellRecipe.swift */; };
 		8EC4D18E26865DDB00D92233 /* CellRecipe.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC4D18C26865DDB00D92233 /* CellRecipe.xib */; };
 		8EC4D192268A33B100D92233 /* DetailsRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D191268A33B100D92233 /* DetailsRecipesViewController.swift */; };
-		8EC4D194268B794E00D92233 /* createRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D193268B794E00D92233 /* createRecipeView.swift */; };
+		8EC4D194268B794E00D92233 /* CreateRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4D193268B794E00D92233 /* CreateRecipeViewController.swift */; };
 		958FC70F268CA46B00FC7B07 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958FC70E268CA46B00FC7B07 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,13 +59,13 @@
 		8EC4D1692684D8F300D92233 /* suduRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = suduRecipesUITests.swift; sourceTree = "<group>"; };
 		8EC4D16B2684D8F300D92233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EC4D1772684EF8D00D92233 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		8EC4D1792684EFB600D92233 /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
+		8EC4D1792684EFB600D92233 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		8EC4D18126861A0C00D92233 /* RecipesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListViewController.swift; sourceTree = "<group>"; };
 		8EC4D18326861B5E00D92233 /* recipeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeType.swift; sourceTree = "<group>"; };
 		8EC4D18B26865DDB00D92233 /* CellRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellRecipe.swift; sourceTree = "<group>"; };
 		8EC4D18C26865DDB00D92233 /* CellRecipe.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellRecipe.xib; sourceTree = "<group>"; };
 		8EC4D191268A33B100D92233 /* DetailsRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRecipesViewController.swift; sourceTree = "<group>"; };
-		8EC4D193268B794E00D92233 /* createRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createRecipeView.swift; sourceTree = "<group>"; };
+		8EC4D193268B794E00D92233 /* CreateRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecipeViewController.swift; sourceTree = "<group>"; };
 		958FC70E268CA46B00FC7B07 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,8 +120,8 @@
 				8EC4D1472684D8EF00D92233 /* AppDelegate.swift */,
 				8EC4D14B2684D8EF00D92233 /* ViewController.swift */,
 				8EC4D1772684EF8D00D92233 /* LoginViewController.swift */,
-				8EC4D1792684EFB600D92233 /* signupViewController.swift */,
-				8EC4D193268B794E00D92233 /* createRecipeView.swift */,
+				8EC4D1792684EFB600D92233 /* SignupViewController.swift */,
+				8EC4D193268B794E00D92233 /* CreateRecipeViewController.swift */,
 				8EC4D18126861A0C00D92233 /* RecipesListViewController.swift */,
 				8EC4D191268A33B100D92233 /* DetailsRecipesViewController.swift */,
 				8EC4D1492684D8EF00D92233 /* SceneDelegate.swift */,
@@ -291,10 +291,10 @@
 				8EC4D18426861B5E00D92233 /* recipeType.swift in Sources */,
 				8EC4D18D26865DDB00D92233 /* CellRecipe.swift in Sources */,
 				958FC70F268CA46B00FC7B07 /* APIService.swift in Sources */,
-				8EC4D194268B794E00D92233 /* createRecipeView.swift in Sources */,
+				8EC4D194268B794E00D92233 /* CreateRecipeViewController.swift in Sources */,
 				8EC4D18226861A0C00D92233 /* RecipesListViewController.swift in Sources */,
 				8EC4D192268A33B100D92233 /* DetailsRecipesViewController.swift in Sources */,
-				8EC4D17A2684EFB600D92233 /* signupViewController.swift in Sources */,
+				8EC4D17A2684EFB600D92233 /* SignupViewController.swift in Sources */,
 				8EC4D1482684D8EF00D92233 /* AppDelegate.swift in Sources */,
 				8EC4D14A2684D8EF00D92233 /* SceneDelegate.swift in Sources */,
 			);
